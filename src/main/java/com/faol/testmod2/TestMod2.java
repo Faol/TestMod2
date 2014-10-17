@@ -1,5 +1,6 @@
 package com.faol.testmod2;
 
+import com.faol.testmod2.configuration.ConfigurationHandler;
 import com.faol.testmod2.proxy.IProxy;
 import com.faol.testmod2.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -19,7 +20,7 @@ public class TestMod2 {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler
