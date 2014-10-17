@@ -1,15 +1,17 @@
 package com.faol.testmod2;
 
-import com.faol.testmod2.configuration.ConfigurationHandler;
+import com.faol.testmod2.handler.ConfigurationHandler;
 import com.faol.testmod2.proxy.IProxy;
 import com.faol.testmod2.reference.Reference;
+import com.faol.testmod2.utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class TestMod2 {
 
     @Mod.Instance(Reference.MOD_ID)
@@ -21,6 +23,7 @@ public class TestMod2 {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
     }
 
     @Mod.EventHandler
