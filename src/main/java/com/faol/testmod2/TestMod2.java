@@ -3,6 +3,7 @@ package com.faol.testmod2;
 import com.faol.testmod2.handler.ConfigurationHandler;
 import com.faol.testmod2.init.ModBlocks;
 import com.faol.testmod2.init.ModItems;
+import com.faol.testmod2.init.Recipes;
 import com.faol.testmod2.proxy.IProxy;
 import com.faol.testmod2.reference.Reference;
 import com.faol.testmod2.utility.LogHelper;
@@ -33,7 +34,7 @@ public class TestMod2 {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
+        Recipes.init();
     }
 
     @Mod.EventHandler
