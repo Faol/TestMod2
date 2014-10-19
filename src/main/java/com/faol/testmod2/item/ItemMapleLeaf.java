@@ -5,5 +5,6 @@ public class ItemMapleLeaf extends ItemTM {
     public ItemMapleLeaf(){
         super();
         this.setUnlocalizedName("mapleLeaf");
+        this.maxStackSize=1;
     }
 }
