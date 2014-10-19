@@ -1,6 +1,7 @@
 package com.faol.testmod2;
 
 import com.faol.testmod2.handler.ConfigurationHandler;
+import com.faol.testmod2.init.ModItems;
 import com.faol.testmod2.proxy.IProxy;
 import com.faol.testmod2.reference.Reference;
 import com.faol.testmod2.utility.LogHelper;
@@ -24,6 +25,8 @@ public class TestMod2 {
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
+        ModItems.init();
     }
 
     @Mod.EventHandler
