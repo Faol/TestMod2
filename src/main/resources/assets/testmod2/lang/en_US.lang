@@ -1,2 +1,3 @@
 item.testmod2:mapleLeaf.name=Maple Leaf
 tile.testmod2:flag.name=Canadian Flag
+itemGroup.testmod2=Test Mod 2
