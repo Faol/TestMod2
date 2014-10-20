@@ -1,3 +1,13 @@
+#Items
 item.testmod2:mapleLeaf.name=Maple Leaf
+
+#Blocks
 tile.testmod2:flag.name=Canadian Flag
+
+#Creative Tabs
 itemGroup.testmod2=Test Mod 2
+
+#Keys
+keys.testmod2.category=Test Mod 2
+keys.testmod2.charge=Charge
+keys.testmod2.release=Release

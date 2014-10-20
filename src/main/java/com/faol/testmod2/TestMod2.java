@@ -1,5 +1,6 @@
 package com.faol.testmod2;
 
+import com.faol.testmod2.client.handler.KeyInputEventHandler;
 import com.faol.testmod2.handler.ConfigurationHandler;
 import com.faol.testmod2.init.ModBlocks;
 import com.faol.testmod2.init.ModItems;
@@ -27,7 +28,7 @@ public class TestMod2 {
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-
+        proxy.registerKeyBinding();
         ModItems.init();
         ModBlocks.init();
     }
@@ -35,6 +36,7 @@ public class TestMod2 {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         Recipes.init();
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
     }
 
     @Mod.EventHandler
