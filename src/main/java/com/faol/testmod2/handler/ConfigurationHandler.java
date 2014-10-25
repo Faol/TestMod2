@@ -10,6 +10,8 @@ import java.io.File;
 public class ConfigurationHandler {
     public static Configuration configuration;
     public static boolean testValue=false;
+    public static String testValue2="";
+    public static int testInt=1;
 
 
     public static void init(File configFile){
@@ -31,6 +33,8 @@ public class ConfigurationHandler {
 
     private static void loadConfiguration(){
         testValue=configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "This is an example!");
+        testValue2=configuration.getString("testValue2",Configuration.CATEGORY_GENERAL,"Hallo","This is a String Test");
+        testInt=configuration.getInt("testInteger",Configuration.CATEGORY_GENERAL,5,1,10,"This is an Int Test");
         if(configuration.hasChanged()){
             configuration.save();
         }

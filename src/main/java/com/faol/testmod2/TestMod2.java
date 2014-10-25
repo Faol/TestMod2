@@ -41,6 +41,7 @@ public class TestMod2 {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
+        LogHelper.info("TestInt:"+ConfigurationHandler.testInt);
 
     }
 
