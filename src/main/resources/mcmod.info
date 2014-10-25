@@ -3,8 +3,8 @@
 "modid": "TestMod2",
 "name": "Test Mod 2",
 "description": "My first Mod!",
-"version": "0.2",
-"mcversion": "1.7.10",
+"version": "${mod_version}",
+"mcversion": "${minecraft_version}",
 "url": "",
 "updateUrl": "",
 "authorList": [
