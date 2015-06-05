@@ -17,3 +17,5 @@
 /*.ipr
 /*.iws
 /atlassian-ide-plugin.xml
+
+.DS_Store
